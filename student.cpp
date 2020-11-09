@@ -7,8 +7,12 @@
 #include<string> // to import and use String library 
 using namespace std ;
 int main()
-{    string  section , dgree , Class , name; // variable  String
+{  
+
+     string  section , dgree , Class , name ; // variable  String
 	int score , ID ;  //  ID integer
+    char stop ;
+    do{
 	cout<<"Enter Your Name : "; // Dislapy A message on screen 
 	cin>>name; 
 	cout<<"Enter Your ID : "; cin >> ID ; // Enter student ID
@@ -24,9 +28,6 @@ int main()
 	else if (section == "C"){
 		Class = "computer Engneering" ;
 	}
-    else {
-        class = "Not Found";
-    }
 	cout<<"Enter Your Score : "; cin >> score ; //student Score
 	switch(score) // check if score between 90 and 100
 	{
@@ -51,6 +52,8 @@ int main()
 	cout<< "\n"<<"Student Information "<<"\n";
 	// Show all information that doctor Entered 
 	cout << "Name : "<< name << "\n"<<"ID : "<< ID << "\n"<<"Department : "<< Class << "\n"<<"Dgree : "<< dgree << endl ;
+    cout<<"Enter y to Exit or n to contiue... ";cin>>stop ;
     
+    }while(stop != 'y');
 	return 0;
 }
